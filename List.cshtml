@@ -1,0 +1,42 @@
+﻿@*@model IEnumerable<WebApplication4.Models.Student>
+    @{
+        ViewBag.Title = "List";
+    }
+
+    <h2>List</h2>
+
+    @{
+        foreach(var s in Model)
+        {
+            @s.id <br /> @s.name
+        }
+    }*@
+
+@model IEnumerable<WebApplication4.Models.Student>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<table style="background-color:greenyellow" height="100%"  width="100%">
+    <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Marks </th>
+    </tr>
+
+    @{
+        foreach (var s in Model)
+        {
+            <tr>
+                <td> @s.id  </td>
+                <td> @s.name </td>
+                <td> @s.marks</td>
+            </tr>
+
+        }
+
+    }
+</table>
+
